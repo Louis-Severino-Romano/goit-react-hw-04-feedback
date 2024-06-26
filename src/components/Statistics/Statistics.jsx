@@ -1,22 +1,17 @@
 import './Statistics.css';
-export const Statistics = ({ Good, Neutral, Bad, Total, Percentage }) => {
+export const Statistics = (props) => {
   return (
     <div>
       <p className="review-stats">
-        Good: <span>{Good}</span>
+        Good: <span>{props.good}</span>
       </p>
       <p className="review-stats">
-        Neautral: <span>{Neutral}</span>
+        Neautral: <span>{props.neutral}</span>
       </p>
       <p className="review-stats">
-        Bad: <span>{Bad}</span>
+        Bad: <span>{props.bad}</span>
       </p>
-      <p>
-        Total: <span>{Total}</span>
-      </p>
-      <p>
-        Percentage: <span>{Percentage.toFixed(0)}%</span>
-      </p>
+      
     </div>
   );
 };
