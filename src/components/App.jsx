@@ -12,7 +12,7 @@ function App() {
   const handleClick = type => {
     switch (type) {
       case 'good':
-        setGood(good + 1);
+        setGood(prevGood => prevGood+ 1);
         break;
       case 'neutral':
         setNeutral(prevNeutral => prevNeutral + 1);
